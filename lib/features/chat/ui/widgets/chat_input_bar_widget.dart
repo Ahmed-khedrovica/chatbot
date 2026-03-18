@@ -4,8 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../cubits/chat_cubit/chat_cubit.dart';
 
-/// Input bar for the chat screen matching the Figma design.
-/// White rounded field with microphone icon and blue circular send button.
 class ChatInputBarWidget extends StatelessWidget {
   const ChatInputBarWidget({
     super.key,

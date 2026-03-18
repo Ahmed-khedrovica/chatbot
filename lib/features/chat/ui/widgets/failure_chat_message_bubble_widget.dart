@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// Error chat bubble with last sent user message and error message,
-/// styled to look more like an error, and prominently features a resend option.
+
 class FailureChatMessageBubbleWidget extends StatelessWidget {
   const FailureChatMessageBubbleWidget({
     super.key,

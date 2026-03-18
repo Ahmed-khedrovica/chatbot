@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Custom app bar for the chat screen matching the Figma design.
-/// Displays ChatGPT branding with robot icon, online status, and action icons.
 class ChatAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   const ChatAppBarWidget({
     super.key,

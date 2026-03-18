@@ -10,8 +10,6 @@ import '../widgets/chat_app_bar_widget.dart';
 import '../widgets/chat_input_bar_widget.dart';
 import '../widgets/send_message_bloc_consumer.dart';
 
-/// Chat screen UI matching the Figma ChatGPT-style design.
-/// Static sample messages for layout preview.
 class ChatScreenWidget extends StatefulWidget {
   const ChatScreenWidget({super.key});
 

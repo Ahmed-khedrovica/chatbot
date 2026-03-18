@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// Chat message bubble matching the Figma design.
-/// User messages: blue, right-aligned. Bot messages: grey, left-aligned with avatar.
+
 class ChatMessageBubbleWidget extends StatelessWidget {
   const ChatMessageBubbleWidget({
     super.key,

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// Animated loading chat message bubble for bot "typing" state.
-/// Matches the bot bubble layout (avatar + bubble) with bouncing dots animation.
+
 class LoadingChatMessageBubbleWidget extends StatefulWidget {
   const LoadingChatMessageBubbleWidget({super.key});
 

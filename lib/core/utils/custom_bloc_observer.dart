@@ -1,8 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-/// A custom BlocObserver that logs bloc events, transitions, errors and changes
-/// for debugging. Only logs when [kDebugMode] is true.
 class CustomBlocObserver extends BlocObserver {
   @override
   void onCreate(BlocBase<dynamic> bloc) {
