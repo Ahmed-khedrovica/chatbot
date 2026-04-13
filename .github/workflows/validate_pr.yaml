@@ -1,0 +1,66 @@
+name: Validate PR
+
+on:
+  pull_request:
+
+jobs:
+  android-validate-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: clone the repository
+        uses: actions/checkout@v4
+
+      - name: setup java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: setup flutter
+        uses: flutter-actions/setup-flutter@v4
+        with:
+          channel: stable
+          cache: true
+
+      - name: setup ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+          working-directory: android
+
+      - name: Run fastlane validate_pr
+        working-directory: android
+        run: bundle exec fastlane validate_pr
+
+
+  ios-validate-pr:
+    runs-on: macos-latest
+
+    steps:
+      - name: clone the repository
+        uses: actions/checkout@v4
+
+      - name: setup java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: setup flutter
+        uses: flutter-actions/setup-flutter@v4
+        with:
+          channel: stable
+          cache: true
+
+      - name: setup ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+          working-directory: ios
+
+      - name: Run fastlane validate_pr
+        working-directory: ios
+        run: bundle exec fastlane validate_pr
