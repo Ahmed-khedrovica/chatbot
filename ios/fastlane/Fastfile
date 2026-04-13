@@ -13,16 +13,16 @@
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
 
-default_platform(:android)
+default_platform(:ios)
 
-platform :android do
-  desc "Run static analysis, unit/widget tests, and build APK for PR checks"
+platform :ios do
+  desc "Run static analysis, unit/widget tests, and build IPA for PR checks"
   lane :validate_pr do
     flutter_root = File.expand_path("../..", __dir__)
     Dir.chdir(flutter_root) do
       sh("flutter pub get")
       sh("flutter test")
-      sh("flutter build apk")
+      sh("flutter build ipa --no-codesign")
     end
   end
 end
