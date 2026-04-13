@@ -22,6 +22,7 @@ platform :ios do
     Dir.chdir(flutter_root) do
       sh("flutter pub get")
       sh("flutter test")
+      sh("cd ios && bundle exec pod install")
       sh("flutter build ios --no-codesign")
     end
   end
