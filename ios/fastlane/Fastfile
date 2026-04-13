@@ -22,6 +22,16 @@ platform :ios do
     Dir.chdir(flutter_root) do
       sh("flutter pub get")
       sh("flutter test")
+    end
+
+    # Re-install CocoaPods to fix Ruby version mismatch on CI runners
+    sh("gem install cocoapods --no-document")
+    cocoapods(
+      podfile: File.join(flutter_root, "ios"),
+      try_repo_update_on_error: true
+    )
+
+    Dir.chdir(flutter_root) do
       sh("flutter build ios --no-codesign")
     end
   end
