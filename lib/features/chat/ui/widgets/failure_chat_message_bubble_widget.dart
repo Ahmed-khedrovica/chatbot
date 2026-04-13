@@ -97,7 +97,7 @@ class FailureChatMessageBubbleWidget extends StatelessWidget {
                       visualDensity: VisualDensity.compact,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
-                        side: BorderSide(color: _errorColor.withValues(alpha: 50)),
+                        side: BorderSide(color: _errorColor.withValues(alpha: 30)),
                       ),
                     ),
                     icon: const Icon(Icons.refresh, size: 18),
